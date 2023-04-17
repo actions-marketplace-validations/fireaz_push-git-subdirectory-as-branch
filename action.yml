@@ -1,5 +1,5 @@
 # action.yml
-name: 'Push git subdirectory as branch'
+name: 'push git branch auto'
 description: 'Push a subdirectory as a branch to any git repo over SSH (or to the local repo)'
 author: 'Nguyen Van Hau <nguyenvanhaudev@gmail.com>'
 runs:
