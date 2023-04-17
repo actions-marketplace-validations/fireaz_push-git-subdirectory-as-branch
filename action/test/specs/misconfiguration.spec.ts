@@ -242,7 +242,7 @@ describe('Misconfigurations', () => {
       .runWithGithubEnv(
         folders.testName,
         {
-          REPO: 'https://github.com/FireAZ/Push-git-subdirectory-as-branch-tests.git',
+          REPO: 'https://github.com/fireaz/push-git-subdirectory-as-branch-tests.git',
           BRANCH: 'branch-a',
           FOLDER: folders.dataDir,
         },

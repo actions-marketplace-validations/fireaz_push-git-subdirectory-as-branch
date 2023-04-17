@@ -1,6 +1,6 @@
 # GitHub Action: Push git subdirectory as branch
 
-[![](https://github.com/FireAZ/Push-git-subdirectory-as-branch/workflows/Scheduled%20tests/badge.svg)](https://github.com/FireAZ/Push-git-subdirectory-as-branch/actions?workflow=Scheduled+tests) [![codecov](https://codecov.io/gh/FireAZ/Push-git-subdirectory-as-branch/branch/master/graph/badge.svg)](https://codecov.io/gh/FireAZ/Push-git-subdirectory-as-branch) [![](https://raw.githubusercontent.com/FireAZ/Push-git-subdirectory-as-branch/gh-badges/drift.svg)](https://github.com/s0/libyear-node-action) [![](https://raw.githubusercontent.com/FireAZ/Push-git-subdirectory-as-branch/gh-badges/releases.svg)](https://github.com/s0/libyear-node-action)
+[![](https://github.com/fireaz/push-git-subdirectory-as-branch/workflows/Scheduled%20tests/badge.svg)](https://github.com/fireaz/push-git-subdirectory-as-branch/actions?workflow=Scheduled+tests) [![codecov](https://codecov.io/gh/fireaz/push-git-subdirectory-as-branch/branch/master/graph/badge.svg)](https://codecov.io/gh/fireaz/push-git-subdirectory-as-branch) [![](https://raw.githubusercontent.com/fireaz/push-git-subdirectory-as-branch/gh-badges/drift.svg)](https://github.com/s0/libyear-node-action) [![](https://raw.githubusercontent.com/fireaz/push-git-subdirectory-as-branch/gh-badges/releases.svg)](https://github.com/s0/libyear-node-action)
 
 This GitHub Action will take any subdirectory in your repository, and push it as the contents of a git branch to a repository and branch of your choosing, either over SSH or to the current repo.
 
@@ -14,7 +14,7 @@ If the target branch doesn't exist yet, it will be created automatically.
 
 ## Usage
 
-Simply include the action `FireAZ/Push-git-subdirectory-as-branch@develop` in the appropriate point in your workflow, and pass in the required configuration options:
+Simply include the action `fireaz/push-git-subdirectory-as-branch@develop` in the appropriate point in your workflow, and pass in the required configuration options:
 
 ```yml
 jobs:
@@ -28,7 +28,7 @@ jobs:
 
     # Deploy to local repo
     - name: Deploy
-      uses: FireAZ/Push-git-subdirectory-as-branch@develop
+      uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         REPO: self
         BRANCH: gh-pages
@@ -37,7 +37,7 @@ jobs:
 
     # Deploy to another repo
     - name: Deploy
-      uses: FireAZ/Push-git-subdirectory-as-branch@develop
+      uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         REPO: git@github.com:owner/repo.git
         BRANCH: gh-pages
@@ -65,7 +65,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Deploy
-      uses: FireAZ/Push-git-subdirectory-as-branch@develop
+      uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         REPO: self
         BRANCH: gh-pages
@@ -91,7 +91,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Deploy
-      uses: FireAZ/Push-git-subdirectory-as-branch@develop
+      uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         REPO: self
         BRANCH: gh-pages
@@ -125,7 +125,7 @@ jobs:
         npm run build
 
     - name: Deploy
-      uses: FireAZ/Push-git-subdirectory-as-branch@develop
+      uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         REPO: git@github.com:owner/repo.git
         BRANCH: gh-pages
@@ -162,7 +162,7 @@ jobs:
         npm run build
 
     - name: Deploy
-      uses: FireAZ/Push-git-subdirectory-as-branch@develop
+      uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         REPO: git@mydomain.com:path/to/repo.git
         BRANCH: artifacts
@@ -223,7 +223,7 @@ Example Usage:
 ```yml
 jobs:
   deploy:
-    - uses: FireAZ/Push-git-subdirectory-as-branch@develop
+    - uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         # ...
         MESSAGE: "This updates the content to the commit {sha} that had the message:\n{msg}"
@@ -291,7 +291,7 @@ And the workflow file `.github/workflows/ci.yml`:
 ```yml
 jobs:
   deploy:
-    - uses: FireAZ/Push-git-subdirectory-as-branch@develop
+    - uses: fireaz/push-git-subdirectory-as-branch@develop
       env:
         # ...
         CLEAR_GLOBS_FILE: ".clear-target-files"
